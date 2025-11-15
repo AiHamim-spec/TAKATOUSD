@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BDT Currency Converter</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="./assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <section class="converter-card" aria-labelledby="converter-title">
+        <div class="converter-card__header">
+          <h1 id="converter-title">BDT Currency Converter</h1>
+          <p class="converter-card__subtitle">
+            Convert Bangladeshi Taka to US Dollar (USD), British Pound (GBP), and Malaysian Ringgit (MYR) instantly.
+          </p>
+        </div>
+
+        <label class="field" for="bdtAmount">Amount in Bangladeshi Taka (BDT)</label>
+        <div class="input-row">
+          <span class="input-row__prefix" aria-hidden="true">৳</span>
+          <input
+            id="bdtAmount"
+            type="number"
+            inputmode="decimal"
+            placeholder="0.00"
+            autocomplete="off"
+            min="0"
+            step="0.01"
+            aria-describedby="conversion-note"
+          />
+          <button type="button" id="clearButton" class="clear-button">Clear</button>
+        </div>
+        <p id="conversion-note" class="converter-card__note">
+          Rates are fixed for demonstration purposes and may differ from live exchange values.
+        </p>
+      </section>
+
+      <section class="results-grid" aria-live="polite">
+        <article class="result-card">
+          <header class="result-card__header">
+            <span class="result-card__code">USD</span>
+            <span class="result-card__name">US Dollar</span>
+          </header>
+          <p class="result-card__value" data-currency="USD">--</p>
+          <p class="result-card__rate">1 BDT ≈ 0.0091 USD</p>
+        </article>
+
+        <article class="result-card">
+          <header class="result-card__header">
+            <span class="result-card__code">GBP</span>
+            <span class="result-card__name">British Pound</span>
+          </header>
+          <p class="result-card__value" data-currency="GBP">--</p>
+          <p class="result-card__rate">1 BDT ≈ 0.0071 GBP</p>
+        </article>
+
+        <article class="result-card">
+          <header class="result-card__header">
+            <span class="result-card__code">MYR</span>
+            <span class="result-card__name">Malaysian Ringgit</span>
+          </header>
+          <p class="result-card__value" data-currency="MYR">--</p>
+          <p class="result-card__rate">1 BDT ≈ 0.0360 MYR</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
